@@ -40,10 +40,14 @@ Using above Url we need to **add the controller endpoints path** we need to exte
 
 
 ..........................................................................................................
+
 **Template :-
+
 public <T> ResponseEntity<T> exchange(String url, HttpMethod method,
 			@Nullable HttpEntity<?> requestEntity, Class<T> responseType, Object... uriVariables)
 			throws RestClientException {
+
+
 ......................................................................................................................
 
 
