@@ -1,3 +1,38 @@
+# Spring-Boot-Microservices-Communication-Example-using-RestTemplate
+ we will learn how to create multiple Spring boot microservices and how to use RestTemplate class to make Synchronous communication between multiple microservices.
+
+There are two styles of Microservices Communications:
+
+**Synchronous Communication**
+
+**Asynchronous Communication**
+
+# Synchronous Communication**
+In the case of Synchronous Communication, the client sends a request and waits for a response from the service. The important point here is that the protocol (HTTP/HTTPS) is synchronous and the client code can only continue its task when it receives the HTTP server response. 
+
+For example, Microservice1 acts as a client that sends a request and waits for a response from Microservice2.
+
+**We can use RestTemplate or WebClient or Spring Cloud Open Feign library to make a Synchronous Communication multiple microservices.**
+
+# Asynchronous Communication
+
+In the case of Asynchronous Communication, The client sends a request and does not wait for a response from the service. The client will continue executing its task - It doesn’t wait for the response from the service. 
+
+**For example, Microservice1 acts as a client that sends a request and doesn't wait for a response from Microservice2.**
+# https://www.javaguides.net/2022/10/spring-boot-microservices-communication-using-resttemplate.html Refer this link
+We can use Message brokers such as **RabbitMQ and Apache Kafka to make Asynchronous Communication between multiple microservices.**
+
+ 
+We will create and set up two Spring boot projects as two microservices in IntelliJ IDEA.
+
+
+# CHECK PROJECT IN MASTER BRANCH
+
+**we learned how to create multiple Spring boot microservices and how to use RestTemplate class to make Synchronous communication between multiple microservices.**
+
+
+
+
 # UserManagementClient
 It is Extension of UserManagementApp we here implementing RestTemplate methods in this application ,Kindly refer ReadMeFIle for further detaile explanation.
 
@@ -13,7 +48,7 @@ It is Extension of UserManagementApp we here implementing RestTemplate methods i
 ![image](https://github.com/saitejesh12345/UserManagementClient/assets/108732167/5df8eaa8-7e00-4e6e-9a37-b5e58c8d3d8a)
 
 
-**1.RestTemplate it extends another class and it implements RestOperations,Rest Operations has different menthods to enables communications and Rest Template implements those methods to ENable Communication.
+**1.** RestTemplate it extends another class and it implements RestOperations,Rest Operations has different menthods to enables communications and Rest Template implements those methods to ENable Communication.
 
 **2.** In **UserManagementClient class **,you can simply create an Object of RestTemplate like this
 
@@ -36,12 +71,12 @@ Using above Url we need to **add the controller endpoints path** we need to exte
 **Config** class we will create RestTemplate method in that. But as of now follow same.
 
 
-**5.	Focus on this line Response restTemplate as exchange Method(),go and check exchangemethod() implementation.**
+**6.	Focus on this line Response restTemplate as exchange Method(),go and check exchangemethod() implementation.**
 
 
 ..........................................................................................................
 
-**Template :-
+**Template :-**
 
 public <T> ResponseEntity<T> exchange(String url, HttpMethod method,
 			@Nullable HttpEntity<?> requestEntity, Class<T> responseType, Object... uriVariables)
